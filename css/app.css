@@ -1,0 +1,27 @@
+body {
+  background-color: white;
+  color:black;
+}
+
+.cell {
+  width: 10px;
+  height: 10px;
+  text-align: center;
+  font-size: 1.0em;
+}
+
+.cell span{
+  display: none;
+}
+
+.end {
+  background-color: blue;
+  display: none;
+  margin-left: 180px;
+}
+
+/* .formLine {
+  margin:10px;
+  padding:10px;
+  background-color: cornflowerblue;
+} */
