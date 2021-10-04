@@ -97,7 +97,6 @@ function setMinesNegsCount(cellI, cellJ, board) {
 }
 
 function cellClicked(elCell,i,j){
-    if()
     var elSpan=elCell.querySelector('span')
     elSpan.style.display='inline-block'
 }
