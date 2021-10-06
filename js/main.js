@@ -100,6 +100,8 @@ function cellClicked(elCell,i,j){
         gGame.isOn=true
         timer()
     } 
+
+
     if(gGame.isOn && gBoard[i][j].isShown===false && !gBoard[i][j].isMarked){
         var currCell=gBoard[i][j]
         if(gHint){
@@ -142,7 +144,14 @@ function cellFlag(elCell,i,j){
         gGame.isOn=true
         timer()
     } 
+
     if(gGame.isOn && !gBoard[i][j].isMarked && !gBoard[i][j].isShown){
+       
+        if(gGame.markedCount===gLevel.MINES){ // check if you still have flags first
+            alert('no more flags!')
+            return
+        }
+        
         gGame.markedCount++
         gBoard[i][j].isMarked=true
         var elSpan=elCell.querySelector('span')
@@ -153,6 +162,7 @@ function cellFlag(elCell,i,j){
         checkVictory()
         return
     }
+
     if(gBoard[i][j].isMarked){
         gGame.markedCount--
         gBoard[i][j].isMarked=false
@@ -284,7 +294,12 @@ function placeRandMine(board,mineNum){
     for(var i=1;i<=mineNum;i++){
         var idxI=getRandomInt(0,board.length)
         var idxJ=getRandomInt(0,board[0].length)
-        board[idxI][idxJ].isMine=true
+        // (!board[idxI][idxJ].isMine)?board[idxI][idxJ].isMine=true : i-- // short if dont work... why?????
+        if(!board[idxI][idxJ].isMine){
+            board[idxI][idxJ].isMine=true
+        }else{
+            i--
+        }
     }
 }
 
