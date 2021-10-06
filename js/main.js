@@ -96,7 +96,7 @@ function setMinesNegsCount(cellI, cellJ, board) {
 
 function cellClicked(elCell,i,j){
     
-    if(gGame.shownCount + gGame.markedCount === 0){
+    if(gGame.shownCount===0 && gGame.markedCount===0 && !gIdInterval){
         gGame.isOn=true
         timer()
     } 
@@ -140,7 +140,7 @@ function cellClicked(elCell,i,j){
 }
 
 function cellFlag(elCell,i,j){
-    if(gGame.shownCount + gGame.markedCount === 0){
+    if(gGame.shownCount===0 && gGame.markedCount===0 && !gIdInterval){
         gGame.isOn=true
         timer()
     } 
@@ -253,6 +253,7 @@ document.addEventListener("contextmenu", function(event){
 function restart(boardSize,minesNum){
  
     clearInterval(gIdInterval)
+    gIdInterval=false
     gHint=false
     gHintCount=3
     

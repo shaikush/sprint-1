@@ -9,6 +9,7 @@ body {
   height: 10px;
   text-align: center;
   font-size: 1.0em;
+  table-layout: fixed;
 }
 
 .cell span{
@@ -59,4 +60,8 @@ body {
   text-align:center;
 }
 
+
+.board-container{
+  table-layout: fixed;
+}
 
