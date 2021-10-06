@@ -7,9 +7,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/app.css">
 </head>
-<body onload="init()" onkeyup="movePacman(event)">
-    <h2>Score: <span>0</span> </h2>
-    <div class="end">game over! <span class="gameResult"></span><button onclick="restart()">restart!</button></div>
+<body onload="init()">
+    <div class="timer"> timer:<span>0</span>
+        <div class="score">flags:<span>0</span></div>
+    </div>
+    <div class="levels">
+        <div onclick="restart(4,2)">Beginner</div>
+        <div onclick="restart(8,12)">Medium</div>
+        <div onclick="restart(12,30)">Expert</div>
+    </div>
+    <div class="lives">lives left: <span>3</span> <div class="face">😁</div> <div class="hint" onclick="hint()">💡💡💡</div></div>
     <div class="board-container"></div>
     <script src="js/utils.js"></script>
     <script src="js/main.js"></script>

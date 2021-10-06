@@ -3,6 +3,7 @@ body {
   color:black;
 }
 
+
 .cell {
   width: 10px;
   height: 10px;
@@ -14,14 +15,48 @@ body {
   display: none;
 }
 
-.end {
-  background-color: blue;
-  display: none;
-  margin-left: 180px;
+.lives {
+  background-color: aqua;
 }
 
-/* .formLine {
-  margin:10px;
-  padding:10px;
-  background-color: cornflowerblue;
-} */
+.markRed{
+  background-color: rgb(214, 10, 10);
+}
+
+.mark {
+  background-color: rgb(124, 124, 136);
+}
+
+.score {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.timer{
+  display: inline-block;
+}
+
+.levels{
+  display: flex;
+  background-color: lightsalmon;
+}
+
+.levels div{
+  background-color: lime;
+  align-items: center;
+  margin: 20px;
+}
+
+
+.face{
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.0em;
+  display:inline-block;
+  margin-left: 40px;
+  background-color: grey;
+  text-align:center;
+}
+
+
